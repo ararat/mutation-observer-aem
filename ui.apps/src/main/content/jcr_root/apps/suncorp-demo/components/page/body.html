@@ -1,0 +1,28 @@
+<div class="sg-Page">
+    <a class="sg-Page-skipToContent" href='#main'>Skip to content</a>
+    <header class="sg-Header">
+        <div class="sg-Header-content">
+            <div class="sg-Header-column">
+                <div class="sg-Header-logo">AAMI logo</div>
+            </div>
+            <div class="sg-Header-column sg-u-width10of10 sg-u-textRight">
+                <p class="sg-Header-title sg-Type--heading6">Home insurance</p>
+                <ul class="sg-List-horizontal">
+                    <li>Call us on <a class="sg-Type--phone" href="tel:112233">11 22 33</a></li>
+                    <li class="sg-u-smallHidden"><a class="sg-Type--linkInverse" href="#!">Call me</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="sg-Main sg-u-marginTop--x3 sg-u-marginBottom--x3">
+        <div class="sg-Main-content">
+            <form>
+                <fieldset class="sg-Form-questionGroup sg-u-marginBottom--x4">
+                    <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+                         data-sly-repeat.child="${templatedContainer.structureResources}"
+                         data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"></sly>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</div>

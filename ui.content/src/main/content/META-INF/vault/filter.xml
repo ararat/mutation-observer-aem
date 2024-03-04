@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/suncorp-demo" mode="merge"/>
+    <filter root="/content/suncorp-demo" mode="merge"/>
+    <filter root="/content/dam/suncorp-demo" mode="merge">
+        <exclude pattern="/content/dam/suncorp-demo(/.*)?"/>
+        <include pattern="/content/dam/suncorp-demo/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/suncorp-demo/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/suncorp-demo" mode="merge"/>
+</workspaceFilter>
