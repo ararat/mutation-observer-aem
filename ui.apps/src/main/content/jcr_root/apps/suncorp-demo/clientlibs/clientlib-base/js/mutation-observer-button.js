@@ -1,14 +1,13 @@
-window.onload = () => {
-    const elements = document.getElementsByClassName("aem-radioButton");
+const elements = document.getElementsByClassName("aem-radioButton");
 
-    [].forEach.call(elements, function (element) {
-        const observer = new MutationObserver(callback);
-        const config = {attributes: true, childList: false, characterData: false, subtree: false};
-        observer.observe(element, config);
-        console.log(config);
-        element.setAttribute('data-loaded', 'true');
-    });
-}
+[].forEach.call(elements, function (element) {
+    const observer = new MutationObserver(callback);
+    const config = {attributes: true, childList: false, characterData: false, subtree: false};
+    observer.observe(element, config);
+    console.log(config);
+    element.setAttribute('data-loaded', 'true');
+});
+
 
 function populateContent(content) {
     console.log(content)
