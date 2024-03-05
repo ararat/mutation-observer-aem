@@ -14,10 +14,10 @@
     limitations under the License.
 */-->
 <sly data-sly-unwrap="${true}" data-sly-use.template="core/wcm/components/commons/v1/templates.html"
-     data-sly-test.hasContent="${properties.title}" data-sly-use.radio="au.com.suncorp.demo.core.models.moobject">
+     data-sly-test.hasContent="${properties.title}" data-sly-use.radio="au.com.suncorp.demo.core.models.Moobject">
 
     <div id="radio-${radio.random}" class="aem-radioButton" style="display: none" data-type="${radio.type}"
-         data-title="${properties.title}"
+         data-title="${radio.title}"
          data-desc="${radio.desc}"
          data-offer-title="${radio.offerTitle}"
          data-offer-desc="${radio.offerDesc}"

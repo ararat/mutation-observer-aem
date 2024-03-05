@@ -1,10 +1,11 @@
 const elements = document.getElementsByClassName("aem-radioButton");
-
+console.log("Found elements", elements.length);
 [].forEach.call(elements, function (element) {
+    console.log("Adding mutation observer to element", element);
     const observer = new MutationObserver(callback);
     const config = {attributes: true, childList: false, characterData: false, subtree: false};
     observer.observe(element, config);
-    console.log(config);
+
     element.setAttribute('data-loaded', 'true');
 });
 

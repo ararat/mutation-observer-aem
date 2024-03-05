@@ -6,48 +6,35 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
-
-import javax.inject.Inject;
-import javax.inject.Named;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Slf4j
 @Model(
         adaptables = {SlingHttpServletRequest.class, Resource.class},
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
-public class moobject {
-    @Getter
-    @Inject
-    @Named("jcr:content/title")
+@Getter
+public class Moobject {
+    @ValueMapValue
     private String title;
 
-    @Getter
-    @Inject
-    @Named("jcr:content/desc")
+    @ValueMapValue
     private String desc;
 
-    @Getter
-    @Inject
-    @Named("jcr:content/type")
+    @ValueMapValue
     private String type;
 
-    @Getter
-    @Inject
-    @Named("jcr:content/offerTitle")
+    @ValueMapValue
     private String offerTitle;
 
-    @Getter
-    @Inject
-    @Named("jcr:content/offerDesc")
+    @ValueMapValue
     private String offerDesc;
 
-    @Getter
-    @Inject
-    @Named("jcr:content/icon")
+    @ValueMapValue
     private String icon;
 
 
-    private String getRandom() {
+    public String getRandom() {
         return Integer.toString((int) (Math.random() * 1000));
     }
 }
