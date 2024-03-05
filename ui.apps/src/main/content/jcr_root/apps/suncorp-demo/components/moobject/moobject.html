@@ -13,10 +13,10 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+<sly data-sly-unwrap="${true}" data-sly-use.template="core/wcm/components/commons/v1/templates.html"
      data-sly-test.hasContent="${properties.title}">
-
-    <div id="test1" class="aem-radioButton" style="display: none" data-type="${properties.type}"
+    <!-- TODO: Random ID -->
+    <div id="radio-${<random>}" class="aem-radioButton" style="display: none" data-type="${properties.type}"
          data-title="${properties.title}"
          data-desc="${properties.desc}"
          data-offer-title="${properties.offerTitle}"
