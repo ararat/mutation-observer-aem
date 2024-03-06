@@ -1,6 +1,3 @@
-import {ReactDOM} from 'react-dom';
-import {React} from 'react';
-
 const propProvider = document.getElementsByClassName("aem-radioButton")[0];
 let content = {
     title: '',
@@ -42,9 +39,9 @@ class RadioBtn extends React.Component {
                 <SGReact.RadioItem id="radio-item-5" value="fifth"><img src={content.icon}/></SGReact.RadioItem>
                 <SGReact.RadioItem id="radio-item-6" value="sixth" disabled>Sixth</SGReact.RadioItem>
             </SGReact.RadioGroup>,
-            document.getElementById('test1')
+            document.getElementsByClassName("aem-radioButton")[0]
         );
     }
 }
 
-ReactDOM.render(<RadioBtn/>, document.getElementsByClassName("aem-radioButton"));
+ReactDOM.render(<RadioBtn/>, document.getElementsByClassName("aem-radioButton")[0]);
