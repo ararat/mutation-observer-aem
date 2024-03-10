@@ -212,7 +212,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Page Root"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:suncorp-demo - Content,/apps/suncorp-demo/components/form/container,group:suncorp-demo - Structure]">
+                        components="[group:suncorp-demo - Content,group:suncorp-demo - Form,group:suncorp-demo - Structure]">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">

@@ -13,6 +13,7 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Slf4j
+
 @Model(
         adaptables = {SlingHttpServletRequest.class, Resource.class},
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
@@ -45,7 +46,9 @@ public class Moobject {
     //    public String getJSON() {
 //        return "{ \"title\": \"" + title + "\", \"desc\": \"" + desc + "\", \"type\": \"" + type + "\", \"offerTitle\": \"" + offerTitle + "\", \"offerDesc\": \"" + offerDesc + "\", \"icon\": \"" + icon + "\" }";
 //    }
-
+//    @JsonIgnore
+//    @SlingObject
+//    private Resource currentResource;
 
     @JsonIgnore
     public String getJson() {
