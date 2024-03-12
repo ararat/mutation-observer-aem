@@ -1,7 +1,11 @@
 <div class="sg-aem-component" data-sly-use.template="core/wcm/components/commons/v1/templates.html"
-     data-sly-test.hasContent="${resource.path}">
+     data-sly-test.hasContent="${resource.path}" data-sly-use.opt="au.com.suncorp.demo.core.models.SuncorpOptions">
     <sly data-sly-resource="${resource.path @ resourceType='suncorp-demo/components/form/options'}"></sly>
-
+    <sly data-sly-repeat.optionItem="${opt.items}">
+        <input type="${opt.type}" name="${opt.name}" value="${optionItem.value}" checked="${optionItem.selected}"
+               disabled="${optionItem.disabled}" data-data1="${optionItem.data1}"/>
+        <span>${optionItem.text}</span>
+    </sly>
 </div>
 <sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend = 'aem-radioButton'}"></sly>
 
